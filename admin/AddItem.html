@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<head>
+
+<title>Untitled Document</title>
+
+<link rel="stylesheet" type="text/css" href="../my css/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="../my css/style.css">
+
+<script src="../my js/jquery-1.9.1.js"></script>
+<script src="../my js/jquery-ui-1.9.2.custom.js"></script>
+<script>
+function genBox(num)
+{
+	var str="";
+	var i=0;
+	for(i=0;i<num;i++)
+	{
+		str=str+"<input type='text' name='aname[]' class='txtbox' placeholder='enter attribute please'/><select name='datatype[]' class='txtbox' ><option value='int'>number</option><option value='VARCHAR'>alphanumeric</option></select><input type='text' name='size[]' class='txtbox' placeholder='enter size please'/><br />";
+	}
+document.getElementById("autogen").innerHTML=str;
+}
+function catDrop()
+{
+	var xmlobj=new XMLHttpRequest();
+	
+	xmlobj.open("GET","categoryDd.php",true);
+	xmlobj.send(null);
+	xmlobj.onreadystatechange=function()
+	{
+		if(xmlobj.readyState==4)
+			document.getElementById('categoryIn').innerHTML="<select name=\"category\">"+xmlobj.responseText+"</select>";
+	};
+	}
+	function catTxtBox()
+	{
+		document.getElementById('categoryIn').innerHTML="<input type=\"text\" name=\"category\" required class=\"txtbox\" >";
+	}
+</script>
+</head>
+
+<body >
+<div  id="accordion" class="ui-accordion ui-widget ui-helper-reset">
+  <div align="center">
+  
+<form method="post" action="../controller/adminOpsControl.php">
+
+    <table width="91%" >
+    	<tr>
+    	<td width="104">Existing category</td>
+        <td width="243">Yes<input type="radio" name="catType" value="yes" required onclick="catDrop()"> No<input type="radio" value="no" name="catType" required onclick="catTxtBox()"></td>
+        
+    	</tr>
+      <tr>
+        <td width="104">Category</td>
+        <td width="243"><div id="categoryIn"></div></td>
+        </tr>
+      <tr>
+        <td>Item Name</td>
+        <td><input type="text" name="itemName" required class="txtbox"></td>
+        </tr>
+         <tr>
+           <td>&nbsp;</td>
+           <td><input type="submit" id="submit"name="submit" value="addItem" class="ui-button"></td>
+        </tr>
+        
+    </table>
+     <table width="91%" >
+      <tr>
+        <td width="104">Enter no. of attribute</td>
+        <td width="243"><input type="text" required class="txtbox" onKeyUp="genBox(this.value)"></td>
+      </tr>
+      <tr> <td colspan="2"><cite>Please note id, name,price and currency fields are generated automatically</cite></td></tr>
+      <tr><td>&nbsp;</td>
+           <td><div id="autogen"></div></td>
+        </tr>
+    </table>
+    </form>
+  </div>
+
+
+
+
+</div>
+
+</body>
+</html>

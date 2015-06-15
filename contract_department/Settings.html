@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>Magic Admin. Advanced, Beautiful and Customizable Admin Template.</title>
+       <link rel="stylesheet" type="text/css" href="../css/grid.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/ie.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/ie6.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/jquery.wysiwyg.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/styles.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/tablesorter.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/theme-blue.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/thickbox.css"/>
+        
+        
+        
+        
+        <!-- IE Hacks for the Fluid 960 Grid System -->
+        <!--[if IE 6]><link rel="stylesheet" type="text/css" href="ie6.css" tppabs="http://www.xooom.pl/work/magicadmin/css/ie6.css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" type="text/css" href="ie.css" tppabs="http://www.xooom.pl/work/magicadmin/css/ie.css" media="screen" /><![endif]-->
+        
+		<!-- JQuery engine script-->
+		<script type="text/javascript" src="jquery/jquery-1.3.2.min.js"></script>
+        <script type="text/javascript" src="jquery/jquery.pstrength-min.1.2.js"></script>
+        <script type="text/javascript" src="jquery/jquery.tablesorter.min.js"></script>
+        <script type="text/javascript" src="jquery/jquery.tablesorter.pager.js"></script>
+        <script type="text/javascript" src="jquery/jquery.wysiwyg.js"></script>
+        <script type="text/javascript" src="jquery/thickbox.js"></script>
+        
+        
+        
+        
+        
+        
+        
+        <!-- Initiate WYIWYG text area -->
+		<script type="text/javascript">
+			$(function()
+			{
+			$('#wysiwyg').wysiwyg(
+			{
+			controls : {
+			separator01 : { visible : true },
+			separator03 : { visible : true },
+			separator04 : { visible : true },
+			separator00 : { visible : true },
+			separator07 : { visible : false },
+			separator02 : { visible : false },
+			separator08 : { visible : false },
+			insertOrderedList : { visible : true },
+			insertUnorderedList : { visible : true },
+			undo: { visible : true },
+			redo: { visible : true },
+			justifyLeft: { visible : true },
+			justifyCenter: { visible : true },
+			justifyRight: { visible : true },
+			justifyFull: { visible : true },
+			subscript: { visible : true },
+			superscript: { visible : true },
+			underline: { visible : true },
+            increaseFontSize : { visible : false },
+            decreaseFontSize : { visible : false }
+			}
+			} );
+			});
+        </script>
+        
+        <!-- Initiate tablesorter script -->
+        <script type="text/javascript">
+			$(document).ready(function() { 
+				$("#myTable") 
+				.tablesorter({
+					// zebra coloring
+					widgets: ['zebra'],
+					// pass the headers argument and assing a object 
+					headers: { 
+						// assign the sixth column (we start counting zero) 
+						6: { 
+							// disable it by setting the property sorter to false 
+							sorter: false 
+						} 
+					}
+				}) 
+			.tablesorterPager({container: $("#pager")}); 
+		}); 
+		</script>
+        
+        <!-- Initiate password strength script -->
+		<script type="text/javascript">
+			$(function() {
+			$('.password').pstrength();
+			});
+        </script>
+	</head>
+	<body>
+    	<!-- Header -->
+        <div id="header">
+            <!-- Header. Status part -->
+            <div id="header-status">
+                <div class="container_12">
+                    <div class="grid_8">
+					&nbsp;
+                    </div>
+                    <div class="grid_4">
+                        <a href="" id="logout">
+                        Logout
+                        </a>
+                    </div>
+                </div>
+                <div style="clear:both;"></div>
+            </div> <!-- End #header-status -->
+            
+            <!-- Header. Main part -->
+            <div id="header-main">
+                <div class="container_12">
+                    <div class="grid_12">
+                        <div id="logo">
+                            <ul id="nav">
+                               
+                                <li><a href="Home.html">Home</a></li>
+                                 <li><a href="Profile.html">Profile</a></li>
+                                <li><a href="Contract.html">Contract</a></li>
+                               
+                                <li id="current"><a href="Settings.html">Settings</a></li>
+                            </ul>
+                        </div><!-- End. #Logo -->
+                    </div><!-- End. .grid_12-->
+                    <div style="clear: both;"></div>
+                </div><!-- End. .container_12 -->
+            </div> <!-- End #header-main -->
+            <div style="clear: both;"></div>
+            <!-- Sub navigation -->
+            <!-- <div id="subnav">
+                <div class="container_12">
+                    <div class="grid_12">
+                        <ul>
+                            <li><a href="#">link 1</a></li>
+                            <li><a href="#">link 2</a></li>
+                            <li><a href="#">link 3</a></li>
+                            <li><a href="#">link 4</a></li>
+                            <li><a href="#">link 5</a></li>
+                        </ul>
+                        
+                    </div><!-- End. .grid_12-->
+                <!--</div><!-- End. .container_12 -->
+                <!--<div style="clear: both;"></div>
+            </div> --><!-- End #subnav -->
+        </div> <!-- End #header -->
+        
+		<div class="container_12">
+        
+
+            
+            <!-- Dashboard icons --><!-- End .grid_7 -->
+            
+            <!-- Account overview --><!-- End .grid_5 -->
+            
+          <div style="clear:both;"></div><!-- End .grid_12 -->
+                
+            <!-- Categories list -->
+            <div class="grid_6">
+                
+                <div class="module">
+                     <h2><span>Categories</span></h2>
+                        
+                     <div class="module-body">
+                         <a href="" class="removable">images</a><br />
+                         <a href="" class="removable">video</a><br />
+                         <a href="" class="removable">audio</a><br />
+                         <a href="" class="removable">documents</a><br />
+                         <a href="" class="removable">apps</a><br />
+                         <a href="" class="removable">others</a>
+                         
+                         <form action="">
+                            <fieldset>
+                                <input type="text" class="input-medium" />&nbsp;&nbsp;<input class="submit-green" type="submit" value="Add category" />
+                            </fieldset>
+                         </form>
+                     </div>
+                </div> <!-- module -->
+                <div style="clear:both;"></div>
+			</div> <!-- End .grid_6 -->
+            
+            <!-- To-do list -->
+            <div class="grid_6">
+            
+                <div class="module">
+                     <h2><span>To-do list</span></h2>
+                        
+                     <div class="module-body">
+                         <p><a href="" class="checkable">check articles for spelling</a><br />
+                           <a href="" class="checkable">remove old articles</a><br />
+                           <a href="" class="checkable">switch to a bigger plan</a><br />
+                           <a href="" class="removable completed">write an article</a><br />
+                         <a href="" class="removable completed">do maintanance stuff</a><br />
+                         </p>
+                         <form action="">
+                            <fieldset>
+                                <input type="text" class="input-medium" />&nbsp;&nbsp;<input class="submit-green" type="submit" value="Add item" />
+                            </fieldset>
+                         </form>
+                     </div>
+                </div> <!-- module -->
+                <div style="clear:both;"></div>
+            
+            </div> <!-- End .grid_6 -->
+            <div style="clear:both;"></div>
+            
+            <!-- Form elements -->    
+            <div class="grid_12"><!-- End .module -->
+       		  <div style="clear:both;"></div>
+            </div> <!-- End .grid_12 -->
+                
+            <!-- Settings-->
+            <div class="grid_6">
+                <div class="module">
+                     <h2><span>Settings</span></h2>
+                        
+                     <div class="module-body">
+                        <p class="notification n-attention"><strong>Running out of space?</strong><br />Just contact us and switch to a bigger plan</p>
+                        
+                         <div>
+                             <div class="indicator">
+                                 <div style="width: 23%;"><!-- change the width value (23%) to dynamically control your indicator -->
+                                  </div>
+                             </div>
+                             <p>Your storage space: 23 MB out of 100MB</p>
+                         </div>
+                         
+                         <div>
+                             <div class="indicator">
+                                 <div style="width: 100%;"><!-- change the width value (100%) to dynamically control your indicator -->
+                                  </div>
+                             </div>
+                             <p>Your bandwidth (January): 1 GB out of 1 GB</p>
+                         </div>
+                         
+                     </div> <!-- End .module-body -->
+                </div> <!-- End .module -->
+            </div> <!-- End .grid_6 -->
+                
+            <!-- Password -->
+            <div class="grid_6">
+                <div class="module">
+                     <h2><span>Reset Password</span></h2>
+                        
+                     <div class="module-body">
+                        <form action="">
+                            <p>
+                                <label>Type in new password</label>
+                                <input class="input-medium password" type="password" />
+                            </p>
+                            <p>
+                                <label>Repeat password</label>
+                                <input type="password" class="input-medium" />
+                            </p>
+                            <fieldset>
+                                <input class="submit-green" type="submit" value="Submit" /> 
+                                <input class="submit-gray" type="submit" value="Cancel" />
+                            </fieldset>
+                        </form>
+                        
+                     </div> <!-- End .module-body -->
+                </div> <!-- End .module -->
+                <div style="clear:both;"></div>
+            </div> <!-- End .grid_6 -->
+            <div style="clear:both;"></div><!-- End .grid_3 --><!-- End .grid_3 --><!-- End .grid_6 -->
+
+            
+          <div style="clear:both;"></div>
+        </div> <!-- End .container_12 -->
+		
+           
+        <!-- Footer -->
+        <div id="footer">
+        	<div class="container_12">
+            	<div class="grid_12">
+                	<!-- You can change the copyright line for your own -->
+                	<p>&copy; 2010. <a href="http://www.templatescreme" title="Visit For More Free Website Templates">Free Website Templates</a></p>
+        		</div>
+            </div>
+            <div style="clear:both;"></div>
+        </div> <!-- End #footer -->
+	</body>
+</html>

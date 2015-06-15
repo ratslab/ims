@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Creating Financial Record</title>
+
+<link rel="stylesheet" type="text/css" href="../my css/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="../my css/style.css">
+
+<script src="../my js/jquery-1.9.1.js"></script>
+<script src="../my js/jquery-ui-1.9.2.custom.js"></script>
+</head>
+
+<body>
+<div id="accordion" class="ui-accordion ui-widget ui-helper-reset">
+<form method="post" enctype="multipart/form-data" action="../controller/adOpsController.php">
+<table width="362" border="0" align="center">
+  
+  <tr>
+    <td width="8%" rowspan="6" class="attribute">&nbsp;</td>
+    <td width="21%"  class="attribute"> Title</td>
+    <td width="71%"><label for="title"></label>
+      <input type="text" name="titleFS" id="titleFS" required class="txtbox" placeholder="title_name" ></td>
+  </tr>
+ 
+  <tr>
+    <td class="attribute">Duration</td>
+    <td><input type="text" name="durationFS" required id="durationFS" class="txtbox"></td>
+  </tr>
+  <tr>
+    <td height="39" class="attribute">Subject</td>
+    <td><label for="subjectFS"></label>
+      <input type="text" name="subjectFS" id="subjectFS" class="txtbox" placeholder="report's subject"></td>
+  </tr>
+  <tr>
+    <td height="39" class="attribute">Attachment</td>
+    <td><label for="attachment"></label>
+      <input type="file" name="file" id="attachmentFS"></td>
+  </tr>
+  <tr>
+    <td height="31" class="attribute" valign="bottom">Description</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2"><label for="description"></label>
+      <textarea name="descriptionFS" id="descriptionFS" cols="58" rows="15" placeholder="describe about your financial status"></textarea></td>
+    </tr>
+     <tr>
+    <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    <td><input type="submit" id="submit"name="submit" value="Submit" align="center" class="ui-button"></td>
+    </tr>
+ 
+</table>
+
+
+</form>
+</div>
+</body>
+</html>

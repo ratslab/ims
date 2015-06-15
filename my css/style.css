@@ -1,0 +1,73 @@
+body {
+	background:#FFF;
+}
+#container {
+	background:#DDD ;
+	width:650px;
+	margin:auto;
+	margin-top:50px;
+	border-radius:10px;
+	border-style:inherit;
+	border-color:#DDD;
+}
+.table
+{
+	margin:auto;
+}
+.header{
+	font-size:20px;
+	font-family:Arial, Helvetica, sans-serif;
+	alignment-adjust:central;
+    padding:4px;	
+	
+}
+.attribute {
+	margin-left: 10px; 
+    color:#000 ;
+	
+}
+
+#submit {
+	border-radius:3px;
+	height:33px;
+	width:85px;
+	font-weight:bold;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:14px;
+	color:#000;
+	border-style:none;
+	background:#39F;
+}
+
+.txtbox {
+	padding: 9px; 
+    border: solid 1px #E5E5E5; 
+    outline: 0; 
+    font: normal 13px/100% Verdana, Tahoma, sans-serif; 
+    width: 200px; 
+    background: #FFFFFF url('bg_form.png') left top repeat-x; 
+    background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF)); 
+    background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px); 
+    box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+    -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+    -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+    } 
+	input:hover, textarea:hover, 
+input:focus, textarea:focus { 
+    border-color: #C9C9C9; 
+    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px; 
+    } 
+	
+
+
+#submit:hover {
+	background:#03F;
+	color:#EEE;
+}
+
+::-webkit-input-placeholder  { 
+	color: rgb(190, 188, 188); 
+	font-style: italic;
+}
+
+

@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Creating your Contract</title>
+<link rel="stylesheet" type="text/css" href="../my css/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="../my css/style.css">
+
+<script src="../my js/jquery-1.9.1.js"></script>
+<script src="../my js/jquery-ui-1.9.2.custom.js"></script>
+</script>
+</head>
+
+<body>
+<div  id="accordion" class="ui-accordion ui-widget ui-helper-reset">
+<form method="post" enctype="multipart/form-data" action="../controller/cdOpsController.php">
+<table width="30%" border="0" align="center">
+  <tr>
+    <td width="15%" height="38" class="attribute">Title</td>
+    <td width="76%" class="attribute"><label for="title"></label>
+      <input type="text" name="titleCC" id="titleCC" required class="txtbox" placeholder="title_name">
+	</td>
+  </tr>
+  <tr>
+    <td height="39" class="attribute" valign="top">Subject</td>
+    <td><label for="subjectCC"></label>
+      <input type="text" name="subjectCC" id="subjectCC" class="txtbox" placeholder="subject"></td>
+  </tr>
+  <tr>
+    <td height="37" class="attribute">Attachment</td>
+    <td><label for="attachmentc"></label>
+      <input type="file" name="file" id="attachmentCC"></td>
+  <tr>
+    <td height="37" class="attribute" valign="bottom">Description</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2"><label for="description"></label>
+      <textarea name="descriptionCC" id="descriptionCC" cols="62" rows="15" placeholder="describe about your contract"></textarea></td>
+    </tr> <tr>
+    <td>&nbsp;</td>
+    <td><input type="submit" id="submit"name="submit" value="Submit" class="ui-button"></td>
+    </tr>
+ 
+  </table>
+
+
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+User name for admin-111
+password:-admin
+
+first step:- add warehouse
+second step:- add users
+third step:- add items
+================
+for lower level employee
+when it needs to buy sum thing go to add order
+and only after approve it can process further
+===============
+higher authority can approve or decline the order;
+===============
+account department and contract department is disabled so please dont add these users
+============
+database connecttivity file is 
+model/connect.php
+go in file and edit parameters to connect to your mysql;
+==============
